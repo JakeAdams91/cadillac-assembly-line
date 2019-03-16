@@ -28,9 +28,9 @@ export default {
     },
     path () {
       if(this.getPath === 'Home') {
-        return 'Git: A guide to Version Control Software'
+        return 'Cadillac Assembly Line'
       } else {
-        return 'Git: ' + this.getPath
+        return 'CAL' + this.getPath
       }
     }
   }

@@ -2,19 +2,30 @@
   <v-app>
     <toolbar />
     <!-- <nav-drawer /> -->
-    <HomePage/>
+    <v-content>
+      <home-page/>
+      <about />
+      <calendar />
+      <contact />
+    </v-content>
   </v-app>
 </template>
 
 <script>
-import Toolbar from './components/navigation/Toolbar'
 // import NavDrawer from './components/navigation/NavDrawer'    -- if used
-import HomePage from './components/HomePage.vue'
+import Toolbar from './components/navigation/Toolbar'
+import HomePage from './components/HomePage'
+import About from './components/About'
+import Calendar from './components/Calendar'
+import Contact from './components/Contact'
 export default {
   name: 'app',
   components: {
-    HomePage,
     Toolbar,
+    HomePage,
+    About,
+    Calendar,
+    Contact
     // NavDrawer   -- if used
   }
 }
