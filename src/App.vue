@@ -3,10 +3,10 @@
     <toolbar />
     <!-- <nav-drawer /> -->
     <v-content>
-      <home-page/>
-      <about />
-      <calendar />
-      <contact />
+      <home-page v-if="getCurrentPath === 'Home'"/>
+      <about v-if="getCurrentPath === 'About Us'"/>
+      <calendar v-if="getCurrentPath === 'Upcoming Shows'"/>
+      <contact v-if="getCurrentPath === 'Contact Us'"/>
     </v-content>
   </v-app>
 </template>
@@ -20,6 +20,11 @@ import Calendar from './components/Calendar'
 import Contact from './components/Contact'
 export default {
   name: 'app',
+  computed: {
+    getCurrentPath () {
+      return this.$store.getters.getCurrentPath
+    }
+  },
   components: {
     Toolbar,
     HomePage,

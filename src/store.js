@@ -6,14 +6,18 @@ export default new Vuex.Store({
   state: {
     // --- for navigation drawer if used ---
     // NavigationDisplay: false,
-    path: 'Home'
+    path: 'Home',
+    paths: ['Home', 'About Us', 'Upcoming Shows', 'Contact Us']
   },
   getters: {
     // ---- for navigation drawer if used ----
     // getNavigationDisplay (state) {
     //   return state.NavigationDisplay
     // },
-    getPath (state) {
+    getPaths (state) {
+      return state.paths
+    },
+    getCurrentPath (state) {
       return state.path
     }
   },

@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'Calendar',
+  name: 'Calendar'
 }
 </script>
 
