@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-layout>
+    <v-layout row>
       <v-flex>
         <div
           v-for="(member, index) in getBand"
