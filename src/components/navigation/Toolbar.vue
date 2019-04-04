@@ -7,11 +7,10 @@
   >
    <!-- if design wants a nav drawer use below code.
     <v-toolbar-side-icon @click="toggleNavigationDisplay"></v-toolbar-side-icon> -->
+    <v-spacer />
     <v-toolbar-title
       v-for="(path, index) in getPaths"
       :key="index"> <v-btn flat @click="setPath(path)">{{path}}</v-btn></v-toolbar-title>
-    <v-spacer />
-
   </v-toolbar>
 </template>
 

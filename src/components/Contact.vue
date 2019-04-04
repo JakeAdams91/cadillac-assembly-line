@@ -1,44 +1,46 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <v-layout>
       <v-flex>
         <v-card>
-          <form>
-            <v-text-field
-              v-model="name"
-              v-validate="'required|max:20'"
-              :counter="20"
-              :error-messages="errors.collect('name')"
-              label="Name"
-              data-vv-name="name"
-              required
-            ></v-text-field>
-            <v-text-field
-              v-model="venue"
-              label="Venue/Business"
-              data-vv-name="venue"
-            ></v-text-field>
-            <v-text-field
-              v-model="email"
-              v-validate="'required|email'"
-              :error-messages="errors.collect('email')"
-              label="E-mail"
-              data-vv-name="email"
-              required
-            ></v-text-field>
-            <v-textarea
-              v-model="textBox"
-              v-validate="'required|max:500'"
-              :counter="500"
-              :error-messages="errors.collect('name')"
-              label="Message"
-              data-vv-name="textBox"
-              required>
-              </v-textarea>
+          <v-flex xs12 sm8 mdAndUp6 offset-mdAndUp3 offset-sm2>
+            <form class="ma-3">
+              <v-text-field
+                v-model="name"
+                v-validate="'required|max:20'"
+                :counter="20"
+                :error-messages="errors.collect('name')"
+                label="Name"
+                data-vv-name="name"
+                required
+              ></v-text-field>
+              <v-text-field
+                v-model="venue"
+                label="Venue/Business"
+                data-vv-name="venue"
+              ></v-text-field>
+              <v-text-field
+                v-model="email"
+                v-validate="'required|email'"
+                :error-messages="errors.collect('email')"
+                label="E-mail"
+                data-vv-name="email"
+                required
+              ></v-text-field>
+              <v-textarea
+                v-model="textBox"
+                v-validate="'required|max:500'"
+                :counter="500"
+                :error-messages="errors.collect('name')"
+                label="Message"
+                data-vv-name="textBox"
+                required>
+                </v-textarea>
 
-            <v-btn @click="submit">submit</v-btn>
-            <v-btn @click="clear">clear</v-btn>
-          </form>
+              <v-btn @click="submit">submit</v-btn>
+              <v-btn @click="clear">clear</v-btn>
+            </form>
+          </v-flex>
         </v-card>
       </v-flex>
     </v-layout>
