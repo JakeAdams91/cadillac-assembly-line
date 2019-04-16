@@ -6,7 +6,6 @@
       <home-page v-if="getCurrentPath === 'Home'"/>
       <about v-if="getCurrentPath === 'About Us'"/>
       <calendar v-if="getCurrentPath === 'Upcoming Shows'"/>
-      <contact  v-if="getCurrentPath === 'Contact Us'"/>
     </v-content>
   </v-app>
 </template>
@@ -17,7 +16,6 @@ import Toolbar from './components/navigation/Toolbar'
 import HomePage from './components/HomePage'
 import About from './components/About'
 import Calendar from './components/Calendar'
-import Contact from './components/Contact'
 export default {
   name: 'app',
   computed: {
@@ -29,15 +27,11 @@ export default {
     Toolbar,
     HomePage,
     About,
-    Calendar,
-    Contact
+    Calendar
     // NavDrawer   -- if used
   }
 }
 </script>
 
 <style>
-  .colorize {
-    background-color: black;
-  }
 </style>
