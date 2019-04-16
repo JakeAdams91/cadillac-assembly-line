@@ -1,12 +1,12 @@
 <template>
   <v-app>
-    <toolbar />
+    <toolbar/>
     <!-- <nav-drawer /> -->
     <v-content>
       <home-page v-if="getCurrentPath === 'Home'"/>
       <about v-if="getCurrentPath === 'About Us'"/>
       <calendar v-if="getCurrentPath === 'Upcoming Shows'"/>
-      <contact v-if="getCurrentPath === 'Contact Us'"/>
+      <contact  v-if="getCurrentPath === 'Contact Us'"/>
     </v-content>
   </v-app>
 </template>
@@ -37,5 +37,7 @@ export default {
 </script>
 
 <style>
-
+  .colorize {
+    background-color: black;
+  }
 </style>
