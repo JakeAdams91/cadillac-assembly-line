@@ -2,7 +2,7 @@
   <v-app>
     <toolbar/>
     <!-- <nav-drawer /> -->
-    <v-content>
+    <v-content class="background">
       <home-page class="mt-5" v-if="getCurrentPath === 'Home'"/>
       <about class="mt-5" v-if="getCurrentPath === 'About Us'"/>
       <calendar class="mt-5" v-if="getCurrentPath === 'Upcoming Shows'"/>
@@ -34,4 +34,7 @@ export default {
 </script>
 
 <style>
+.background {
+  background-color: #ecf2f9;
+ }
 </style>
