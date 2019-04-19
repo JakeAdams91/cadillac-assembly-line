@@ -1,25 +1,20 @@
 <template>
   <v-container grid-list-lg>
-    
+    <v-flex sm8 xs12 offset-sm2>
+      <!-- CalendarView component -->
+      <calendar-view />
+    </v-flex>
     <v-layout justify-space-around>
       <v-flex sm5 xs12 v-for="(column, i) in gridColumns" :key="i">
         <v-layout column>
           <v-flex v-for="(element, index) in column" :key="index">
+            <!-- UpcomingEvents component -->
             <upcoming-events :show="element"></upcoming-events>
           </v-flex>
         </v-layout>
       </v-flex>
     </v-layout>
-    <v-flex sm8 xs12 offset-sm3>
-      <calendar-view />
-    </v-flex>
   </v-container>
-  <!-- <v-flex xs6>
-    <upcoming-events
-      v-for="(show, index) in upcomingShows" :key="index"
-      :show="show"/>
-  </v-flex> -->
-  
 </template>
 
 <script>

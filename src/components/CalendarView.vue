@@ -1,5 +1,5 @@
 <template>
-<v-card width="75%">
+<v-card>
   <v-calendar>
     <template v-slot:day="{ date }">
       <template v-for="event in eventsMap[date]">
