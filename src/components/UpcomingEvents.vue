@@ -3,7 +3,9 @@
     <v-img :src="show.img"></v-img>
     <v-toolbar
       color="#4372AA">
-      <v-toolbar-title v-html="show.venue + ' ' + dateFormat(show.date)"></v-toolbar-title>
+      <!-- TODO: fix this thing. -->
+      <!-- + ' ' + dateFormat(show.date) -->
+      <v-toolbar-title v-html="show.venue"></v-toolbar-title>
     </v-toolbar>
   </v-card>
 </template>
