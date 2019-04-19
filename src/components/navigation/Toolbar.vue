@@ -1,16 +1,25 @@
 <template>
+  <!-- give toolbar absolute to have toolbar dissapear @ scroll. -->
+  <!-- absolute -->
   <v-toolbar
     app
     dark
-    clipped-left
-    color="success"
+    
+    scroll-off-screen
+    :scroll-threshold="10"
+    color="#B0C4DE"
   >
-   <!-- if design wants a nav drawer use below code.
-    <v-toolbar-side-icon @click="toggleNavigationDisplay"></v-toolbar-side-icon> -->
-    <v-spacer />
-    <v-toolbar-title
-      v-for="(path, index) in getPaths"
-      :key="index"> <v-btn flat @click="setPath(path)">{{path}}</v-btn></v-toolbar-title>
+    <v-flex xs6 >
+      <v-img class="mt-5" :src="require('../../assets/logos/logo3.png')" width="350" height="128"></v-img>
+    </v-flex>
+    <template v-slot:extension>
+      <v-spacer/>
+      <v-toolbar-items>
+        <v-btn flat @click="setPath('Home')">Home</v-btn>
+        <v-btn flat @click="setPath('About Us')">About Us</v-btn>
+        <v-btn flat @click="setPath('Upcoming Shows')">Upcoming Shows</v-btn>
+      </v-toolbar-items>
+    </template>
   </v-toolbar>
 </template>
 
@@ -21,10 +30,6 @@ export default {
     setPath (path) {
       this.$store.commit('setPath', path)
     }
-    // if team wants nav drawer
-    // toggleNavigationDisplay () {
-    //   this.$store.commit('toggleNavigationDisplay')
-    // }
   },
   computed: {
     getPaths () {

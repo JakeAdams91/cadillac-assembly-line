@@ -3,9 +3,9 @@
     <toolbar/>
     <!-- <nav-drawer /> -->
     <v-content>
-      <home-page v-if="getCurrentPath === 'Home'"/>
-      <about v-if="getCurrentPath === 'About Us'"/>
-      <calendar v-if="getCurrentPath === 'Upcoming Shows'"/>
+      <home-page class="mt-5" v-if="getCurrentPath === 'Home'"/>
+      <about class="mt-5" v-if="getCurrentPath === 'About Us'"/>
+      <calendar class="mt-5" v-if="getCurrentPath === 'Upcoming Shows'"/>
     </v-content>
   </v-app>
 </template>
