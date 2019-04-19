@@ -25,8 +25,7 @@ export default new Vuex.Store({
       { date: '2019-04-30', venue: 'Phoenix blues Society', img: require('./assets/phoenixbluessociety.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' },
       { date: '2019-04-23', venue: 'The Rhythm Room', img: require('./assets/rhythmroom.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' },
       { date: '2019-05-01', venue: 'West Alley BBQ', img: require('./assets/westalleybbq.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' }
-    ],
-    dates: [ '2019-04-20', '2019-04-28', '2019-04-30', '2019-04-23' ]
+    ]
   },
   getters: {
     // ---- for navigation drawer if used ----
@@ -44,9 +43,6 @@ export default new Vuex.Store({
     },
     getUpcomingShows (state) {
       return state.upcomingShows
-    },
-    getDates (state) {
-      return state.dates
     }
   },
   mutations: {

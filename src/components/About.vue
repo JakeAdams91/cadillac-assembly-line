@@ -1,12 +1,4 @@
 <template>
-  <v-container grid-list-lg>
-    <v-layout justify-space-around>
-      <v-flex sm5 xs12 v-for="(column, i) in gridColumns" :key="i">
-        <v-layout column>
-          <v-flex v-for="(element, index) in column" :key="index">
-            <band-members :member="element"></band-members>
-          </v-flex>
-        </v-layout>
         <!-- <v-card>
           <v-card-title class="">
             Meet the Band
@@ -17,6 +9,14 @@
           </v-card>
           
         </v-card> -->
+  <v-container grid-list-lg>
+    <v-layout justify-space-around>
+      <v-flex sm5 xs12 v-for="(column, i) in gridColumns" :key="i">
+        <v-layout column>
+          <v-flex v-for="(element, index) in column" :key="index">
+            <band-members :member="element"></band-members>
+          </v-flex>
+        </v-layout>
       </v-flex>
     </v-layout>
   </v-container>
