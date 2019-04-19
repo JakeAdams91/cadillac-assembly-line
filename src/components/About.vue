@@ -1,6 +1,6 @@
 <template>
   <v-container grid-list-lg>
-    <v-layout>
+    <v-layout justify-space-around>
       <v-flex sm5 xs12 v-for="(column, i) in gridColumns" :key="i">
         <v-layout column>
           <v-flex v-for="(element, index) in column" :key="index">
@@ -15,6 +15,7 @@
           <v-card xs6>
             <band-members/>
           </v-card>
+          
         </v-card> -->
       </v-flex>
     </v-layout>
@@ -26,9 +27,12 @@ import BandMembers from './BandMembers'
 export default {
   name: 'About',
   computed: {
+    // gets band data.
     getBand () {
       return this.$store.getters.getBand
     },
+    // Create columns to display each band member
+    // dynamically change based on screen size.
     gridColumns () {
       let i = 0
       let j = 0
