@@ -3,7 +3,7 @@
     <toolbar/>
     <!-- <nav-drawer /> -->
     <v-content class="background">
-      <home-page class="mt-5" v-if="getCurrentPath === 'Home'"/>
+      <home-page class="mt-1" v-if="getCurrentPath === 'Home'"/>
       <about class="mt-5" v-if="getCurrentPath === 'About Us'"/>
       <calendar class="mt-5" v-if="getCurrentPath === 'Upcoming Shows'"/>
     </v-content>

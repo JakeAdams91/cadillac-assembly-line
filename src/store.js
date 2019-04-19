@@ -4,19 +4,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    // --- for navigation drawer if used ---
-    // NavigationDisplay: false,
-    // default page
     path: 'Home',
     // list of pages
     paths: ['Home', 'About Us', 'Upcoming Shows'],
     // each band member objectified
     band: [
-      { name: 'Jim', img: require('./assets/images/Jim-6.jpg'), bio: 'Jim has a masters degree in Music, ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores' },
+      { name: 'Jim', img: require('./assets/improvedImages/Jim-3.png'), bio: 'Jim has a masters degree in Music, ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores' },
       { name: 'Paul', img: require('./assets/improvedImages/paul.jpg'), bio: 'ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores' },
       { name: 'Sab', img: require('./assets/improvedImages/sab.jpg'), bio: 'ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores' },
       { name: 'Doug', img: require('./assets/improvedImages/doug.jpg'), bio: 'ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores' },
-      { name: 'Vince', img: require('./assets/images/vince.jpg'), bio: 'ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores' }  
+      { name: 'Vince', img: require('./assets/improvedImages/vince.png'), bio: 'ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores' }  
     ],
     // venues played // upcoming.
     upcomingShows: [
@@ -28,10 +25,6 @@ export default new Vuex.Store({
     ]
   },
   getters: {
-    // ---- for navigation drawer if used ----
-    // getNavigationDisplay (state) {
-    //   return state.NavigationDisplay
-    // },
     getPaths (state) {
       return state.paths
     },
