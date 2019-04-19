@@ -7,7 +7,6 @@
           <v-card xs6>
             <band-members/>
           </v-card>
-          
         </v-card> -->
   <v-container grid-list-lg>
     <v-layout justify-space-around>
