@@ -1,18 +1,23 @@
 <template>
-  <!-- create a card for each upcoming event. -->
+  <!-- create a card for the event (div) -->
   <v-card color="#6E7B8B">
+    <!-- append venues' image/logo -->
     <v-img :src="show.img"></v-img>
     <v-toolbar
       color="#4372AA">
+      <!-- toolbar with venue name and drop down button -->
       <v-toolbar-title v-html="show.venue"></v-toolbar-title>
       <v-card-actions>
       <v-btn icon @click="display = !display">
+        <!-- if display variable is false, point arrow down, if the expansion drawer is displaying point arrow up -->
         <v-icon>{{ display ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
       </v-btn>
       </v-card-actions>
       
     </v-toolbar>
+    <!-- vertical slide transition -->
     <v-slide-y-transition color="#4372AA">
+      <!-- display details about the show / venue, and date / time of event -->
       <v-card-text v-show="display">
         {{ dateFormat(show.date) }}
         {{ show.details }}

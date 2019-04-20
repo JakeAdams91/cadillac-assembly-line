@@ -20,7 +20,16 @@ export default new Vuex.Store({
       { date: '2019-04-20', venue: 'The Blues Foundation', img: require('./assets/bluesfoundation.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' },
       { date: '2019-04-28', venue: 'Moutain View Pub', img: require('./assets/mountainviewpub.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' },
       { date: '2019-04-30', venue: 'Phoenix blues Society', img: require('./assets/phoenixbluessociety.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' },
-      { date: '2019-04-23', venue: 'The Rhythm Room', img: require('./assets/rhythmroom.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' },
+      { date: '2019-05-10', venue: 'The Rhythm Room', img: require('./assets/rhythmroom.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' },
+      { date: '2019-05-01', venue: 'West Alley BBQ', img: require('./assets/westalleybbq.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' }
+    ],
+    aprilShows: [
+      { date: '2019-04-20', venue: 'The Blues Foundation', img: require('./assets/bluesfoundation.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' },
+      { date: '2019-04-28', venue: 'Moutain View Pub', img: require('./assets/mountainviewpub.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' },
+      { date: '2019-04-30', venue: 'Phoenix blues Society', img: require('./assets/phoenixbluessociety.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' }
+    ],
+    mayShows: [
+      { date: '2019-05-10', venue: 'The Rhythm Room', img: require('./assets/rhythmroom.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' },
       { date: '2019-05-01', venue: 'West Alley BBQ', img: require('./assets/westalleybbq.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' }
     ]
   },
@@ -36,6 +45,12 @@ export default new Vuex.Store({
     },
     getUpcomingShows (state) {
       return state.upcomingShows
+    },
+    getAprilShows (state) {
+      return state.aprilShows
+    },
+    getMayShows (state) {
+      return state.mayShows
     }
   },
   mutations: {

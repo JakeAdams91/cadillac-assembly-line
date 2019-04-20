@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <toolbar/>
-    <!-- <nav-drawer /> -->
     <v-content class="background">
       <home-page class="mt-1" v-if="getCurrentPath === 'Home'"/>
       <about class="mt-5" v-if="getCurrentPath === 'About Us'"/>
@@ -11,7 +10,6 @@
 </template>
 
 <script>
-// import NavDrawer from './components/navigation/NavDrawer'    -- if used
 import Toolbar from './components/navigation/Toolbar'
 import HomePage from './components/HomePage'
 import About from './components/About'
@@ -28,7 +26,6 @@ export default {
     HomePage,
     About,
     Calendar
-    // NavDrawer   -- if used
   }
 }
 </script>
