@@ -85,10 +85,6 @@ export default {
 </script>
 
 <style>
-.fonty {
-  text-align: center;
-}
-
 .v-divider {
   background-color: #4372AA;
 }
