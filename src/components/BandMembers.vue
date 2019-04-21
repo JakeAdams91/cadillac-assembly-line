@@ -14,6 +14,7 @@
             <div> {{ member.bio }} </div>
         </v-flex>
       </v-flex>
+
       <!-- medium and up screen sizes -->
       <template v-else>
         <v-flex sm6 md5 lg6 xl4>
