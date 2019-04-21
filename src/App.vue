@@ -31,6 +31,9 @@ export default {
 </script>
 
 <style>
+.fonty {
+  text-align: center;
+}
 .background {
   background-color: #ecf2f9;
  }
