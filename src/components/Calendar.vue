@@ -1,12 +1,12 @@
 <template>
   <!-- init CSS grid -->
-  <v-container grid-list-lg>
+  <v-container grid-list-md>
     <h1 class="fonty">Upcoming Events</h1>
 
     
     <!-- April Showings -->
     <h2>April Gigs</h2>
-    <v-divider />
+    <v-divider class="mb-3"/>
     <v-layout justify-space-around>  
       <!-- for loop over gridcolumns() function, creating grid columns -->
       <v-flex sm5 xs12 v-for="(column, i) in gridColumns(this.getAprilShows)" :key="i">
@@ -22,7 +22,7 @@
 
     <!-- May Showings -->
     <h2>May Gigs</h2>
-    <v-divider />
+    <v-divider class="mb-3"/>
     <v-layout justify-space-around>
       <v-flex sm5 xs12 v-for="(column, i) in gridColumns(this.getMayShows)" :key="i">
         <v-layout column>
@@ -34,7 +34,7 @@
     </v-layout>
   
     <!-- CalendarView component -->
-    <v-divider />
+    <v-divider class="mt-3"/>
     <v-flex sm8 xs12 offset-sm2>
       <calendar-view class="mt-3" />
     </v-flex>
