@@ -5,7 +5,7 @@
 
     
     <!-- April Showings -->
-    <h2>April Gigs</h2>
+    <h2>April Shows</h2>
     <v-divider class="mb-3"/>
     <v-layout justify-space-around>  
       <!-- for loop over gridcolumns() function, creating grid columns -->
@@ -21,7 +21,7 @@
     </v-layout>
 
     <!-- May Showings -->
-    <h2>May Gigs</h2>
+    <h2>May Shows</h2>
     <v-divider class="mb-3"/>
     <v-layout justify-space-around>
       <v-flex sm5 xs12 v-for="(column, i) in gridColumns(this.getMayShows)" :key="i">
