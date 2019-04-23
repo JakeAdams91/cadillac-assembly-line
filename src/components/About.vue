@@ -1,7 +1,7 @@
 <template>
   <!-- init css Grid -->
   <v-container grid-list-md>
-    <h1 class="fonty">Meet the Band</h1>
+    <h1 class="member fonty">Meet the Band</h1>
     <v-divider />
     <!-- Layout styles -->
     <v-layout justify-space-around>
@@ -63,5 +63,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
+.member {
+    color: #003366;
+  }
 </style>

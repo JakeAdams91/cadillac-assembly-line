@@ -5,7 +5,7 @@
     dark
     scroll-off-screen
     :scroll-threshold="10"
-    color="#B0C4DE"
+    color="#93B0D2"
   >
     <!-- create logo -->
     <v-img class="test" :src="require('../../assets/logos/logo3-1.png')"></v-img>

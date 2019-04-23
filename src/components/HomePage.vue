@@ -12,7 +12,7 @@
     <v-card color="#ecf2f9" flat>
       <v-flex xs12 sm6 offset-sm3>
       <!-- <v-card-title class="headline centerize">Cadillac Assembly Line</v-card-title> -->
-        <v-card-text class="subheading">
+        <v-card-text class="subheading tex">
           Cadillac Assembly line is made up of five Blues Music lovers who met over 25 years ago by attending Blues jam sessions in Phoenix.
           Though each member of the band has played in other bands prior, Cadillac Assembly line is the culmination of jamming with other bands
           and getting to know each other through the years,
@@ -22,21 +22,21 @@
       </v-flex>
     </v-card>
     <v-flex xs12 offset-xs3 offset-sm5>
-      <h1>Updates / News</h1>
+      <h1 class="tex">Updates / News</h1>
     </v-flex>
     <v-divider class="widtherizer"></v-divider>    
     <v-container>
       <v-layout row>
         <v-flex sm4>
-          <p>ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiu</p>
+          <p class="tex">ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiu</p>
         </v-flex>
         <v-divider class="ml-2 mr-2" vertical></v-divider>
         <v-flex sm4>
-          <p>ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudanti</p>
+          <p class="tex">ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudanti</p>
         </v-flex>
         <v-divider class="ml-2 mr-2" vertical></v-divider>
         <v-flex sm4>
-          <p>ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudanti</p>
+          <p class="tex">ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudanti</p>
         </v-flex>
       </v-layout>
     </v-container>
@@ -50,6 +50,10 @@ export default {
 </script>
 
 <style>
+.tex {
+    color: #003366;
+    font-family: 'Roboto', 'sans-serif';
+  }
 .centerize {
   text-align: center;
 }

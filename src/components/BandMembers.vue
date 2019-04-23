@@ -11,7 +11,7 @@
         <v-flex xs12>
             <h3 class="headline mb-0"> {{ member.name }} </h3>
             <v-divider />
-            <div> {{ member.bio }} </div>
+            <div class="member"> {{ member.bio }} </div>
         </v-flex>
       </v-flex>
 
@@ -23,7 +23,7 @@
         <v-flex sm6 md7 lg6 xl8>
             <h3 class="headline mb-0"> {{ member.name }} </h3>
             <v-divider />
-            <div> {{ member.bio }} </div>
+            <div class="member"> {{ member.bio }} </div>
         </v-flex>
       </template>
     </v-layout>
@@ -42,6 +42,13 @@ export default {
 }
 </script>
 
-<style>
-  
+<style scoped>
+  .member {
+    color: #003366;
+    font-family: 'Roboto', 'sans-serif';
+  }
+  .headline {
+    color: #003366;
+    font-family: 'Roboto', 'sans-serif';
+  }
 </style>

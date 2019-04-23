@@ -1,12 +1,12 @@
 <template>
   <!-- create a card for the event (div) -->
-  <v-card color="#6E7B8B">
+  <v-card color="#A9B1BD">
     <!-- append venues' image/logo -->
     <v-img :src="show.img"></v-img>
     <v-toolbar
-      color="#4372AA">
+      color="#93B0D2">
       <!-- toolbar with venue name and drop down button -->
-      <v-toolbar-title v-html="show.venue"></v-toolbar-title>
+      <v-toolbar-title class="tex" v-html="show.venue"></v-toolbar-title>
       <v-card-actions>
       <v-btn icon @click="display = !display">
         <!-- if display variable is false, point arrow down, if the expansion drawer is displaying point arrow up -->
@@ -18,7 +18,7 @@
     <!-- vertical slide transition -->
     <v-slide-y-transition>
       <!-- display details about the show / venue, and date / time of event -->
-      <v-card-text v-show="display">
+      <v-card-text class="tex" v-show="display">
         <p>{{ dateFormat(show.date) }}</p>
         <p>{{ show.details }}</p>
       </v-card-text>
@@ -64,5 +64,10 @@ export default {
 </script>
 
 <style>
-  
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+  .tex {
+    color: #003366;
+    font-family: 'Roboto', 'sans-serif';
+  }
 </style>

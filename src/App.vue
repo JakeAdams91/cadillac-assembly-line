@@ -13,7 +13,7 @@
     </v-content>
     <!-- Footer for all pages -->
     <v-footer
-      color="#4372AA"
+      color="#93B0D2"
       class="white--text"
       height="64">
       <!-- flex is a component of CSS Grid. -->

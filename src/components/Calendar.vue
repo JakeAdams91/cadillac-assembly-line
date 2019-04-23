@@ -1,11 +1,11 @@
 <template>
   <!-- init CSS grid -->
   <v-container grid-list-md>
-    <h1 class="fonty">Upcoming Events</h1>
+    <h1 class="fonty month">Upcoming Events</h1>
 
     
     <!-- April Showings -->
-    <h2>April Shows</h2>
+    <h2 class="month">April Shows</h2>
     <v-divider class="mb-3"/>
     <v-layout justify-space-around>  
       <!-- for loop over gridcolumns() function, creating grid columns -->
@@ -21,7 +21,7 @@
     </v-layout>
 
     <!-- May Showings -->
-    <h2 class="mt-5">May Shows</h2>
+    <h2 class="monthy mt-5">May Shows</h2>
     <v-divider class="mb-3"/>
     <v-layout justify-space-around>
       <v-flex sm5 xs12 v-for="(column, i) in gridColumns(this.getMayShows)" :key="i">
@@ -85,7 +85,13 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 .v-divider {
   background-color: #4372AA;
 }
+.month, .monthy {
+  color: #003366;
+  font-family: 'Roboto', 'sans-serif';
+}
+
 </style>
