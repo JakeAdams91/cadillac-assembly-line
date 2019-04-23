@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  // State holds data to be manipulated
   state: {
     path: 'Home',
     // list of pages
@@ -33,6 +34,7 @@ export default new Vuex.Store({
       { date: '2019-05-01', venue: 'West Alley BBQ', img: require('./assets/westalleybbq.png'), details: 'ut perspiciatis unde omnis iste natus error sit voluptatem ' }
     ]
   },
+  // getters serve data from the Vuex store
   getters: {
     getPaths (state) {
       return state.paths
@@ -53,6 +55,7 @@ export default new Vuex.Store({
       return state.mayShows
     }
   },
+  // mutations change stored data.
   mutations: {
     // ---- for navigation drawer if used ----
     // toggleNavigationDisplay (state) {
@@ -61,8 +64,5 @@ export default new Vuex.Store({
     setPath (state, newPath) {
       state.path = newPath
     }
-  },
-  actions: {
-
   }
 })
