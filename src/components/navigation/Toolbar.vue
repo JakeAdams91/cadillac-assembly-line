@@ -7,10 +7,8 @@
     :scroll-threshold="10"
     color="#B0C4DE"
   >
-  <!-- create logo -->
-    <v-flex xs6 >
-      <v-img class="mt-5" :src="require('../../assets/logos/logo3-1.png')" width="350" height="128"></v-img>
-    </v-flex>
+    <!-- create logo -->
+    <v-img class="test" :src="require('../../assets/logos/logo3-1.png')"></v-img>
     <template v-slot:extension>
       <v-spacer/>
       <!-- buttons to navigate the site -->
@@ -38,3 +36,15 @@ export default {
   }
 }
 </script>
+
+<style>
+.test {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 50px !important;
+  max-width: 300px !important;
+  max-height: 175px !important;
+  width: 300px !important;
+  height: 175px !important;
+}
+</style>
