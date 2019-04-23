@@ -16,11 +16,11 @@
       
     </v-toolbar>
     <!-- vertical slide transition -->
-    <v-slide-y-transition color="#4372AA">
+    <v-slide-y-transition>
       <!-- display details about the show / venue, and date / time of event -->
       <v-card-text v-show="display">
-        {{ dateFormat(show.date) }}
-        {{ show.details }}
+        <p>{{ dateFormat(show.date) }}</p>
+        <p>{{ show.details }}</p>
       </v-card-text>
     </v-slide-y-transition>
   </v-card>
@@ -33,10 +33,10 @@ export default {
     return {
       display: false,
       months: [
-        'error: ', 'Jan', 'Feb',
-        'Mar', 'Apr', 'May', 'Jun',
-        'Jul', 'Aug', 'Sep', 'Oct',
-        'Nov', 'Dec'
+        'error: ', 'January', 'February',
+        'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October',
+        'November', 'December'
       ]
     }
   },

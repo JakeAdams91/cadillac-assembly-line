@@ -21,7 +21,7 @@
     </v-layout>
 
     <!-- May Showings -->
-    <h2>May Shows</h2>
+    <h2 class="mt-5">May Shows</h2>
     <v-divider class="mb-3"/>
     <v-layout justify-space-around>
       <v-flex sm5 xs12 v-for="(column, i) in gridColumns(this.getMayShows)" :key="i">
