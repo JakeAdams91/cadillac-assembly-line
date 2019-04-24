@@ -1,19 +1,21 @@
 <template>
-        <!-- <v-card>
-          <v-card-title class="">
-            Meet the Band
-          </v-card-title>
-          <v-parallax :src="require('../assets/images/banner.jpg')"></v-parallax>
-          <v-card xs6>
-            <band-members/>
-          </v-card>
-        </v-card> -->
-  <v-container grid-list-lg>
+  <!-- init css Grid -->
+  <v-container grid-list-md>
+    <h1 class="member fonty">Meet the Band</h1>
+    <v-divider />
+    <!-- Layout styles -->
     <v-layout justify-space-around>
-      <v-flex sm5 xs12 v-for="(column, i) in gridColumns" :key="i">
+      <!-- for loop over gridColumns() function; creating columns -->
+      <!-- sm6 xs12 -->
+      <v-flex  v-for="(column, i) in gridColumns" :key="i">
         <v-layout column>
-          <v-flex v-for="(element, index) in column" :key="index">
+          <!-- for loop over the created columns; place band members -->
+          <v-flex sm6 xs12 v-for="(element, index) in column" :key="index">
+            <!-- dynamically render each band member card -->
+            <v-card flat
+              color="#ecf2f9">
             <band-members :member="element"></band-members>
+            </v-card>
           </v-flex>
         </v-layout>
       </v-flex>
@@ -61,5 +63,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
+.member {
+    color: #003366;
+  }
 </style>

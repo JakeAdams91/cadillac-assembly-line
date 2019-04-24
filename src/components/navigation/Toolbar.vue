@@ -1,19 +1,17 @@
 <template>
-  <!-- give toolbar absolute to have toolbar dissapear @ scroll. -->
-  <!-- absolute -->
+  <!-- header/toolbar -->
   <v-toolbar
     app
     dark
-    
     scroll-off-screen
     :scroll-threshold="10"
-    color="#B0C4DE"
+    color="#93B0D2"
   >
-    <v-flex xs6 >
-      <v-img class="mt-5" :src="require('../../assets/logos/logo3.png')" width="350" height="128"></v-img>
-    </v-flex>
+    <!-- create logo -->
+    <v-img class="test" :src="require('../../assets/logos/logo3-1.png')"></v-img>
     <template v-slot:extension>
       <v-spacer/>
+      <!-- buttons to navigate the site -->
       <v-toolbar-items>
         <v-btn flat @click="setPath('Home')">Home</v-btn>
         <v-btn flat @click="setPath('About Us')">About Us</v-btn>
@@ -38,3 +36,15 @@ export default {
   }
 }
 </script>
+
+<style>
+.test {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 50px !important;
+  max-width: 300px !important;
+  max-height: 175px !important;
+  width: 300px !important;
+  height: 175px !important;
+}
+</style>

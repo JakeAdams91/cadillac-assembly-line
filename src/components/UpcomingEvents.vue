@@ -1,21 +1,26 @@
 <template>
-  <!-- create a card for each upcoming event. -->
-  <v-card color="#6E7B8B">
+  <!-- create a card for the event (div) -->
+  <v-card color="#A9B1BD">
+    <!-- append venues' image/logo -->
     <v-img :src="show.img"></v-img>
     <v-toolbar
-      color="#4372AA">
-      <v-toolbar-title v-html="show.venue"></v-toolbar-title>
+      color="#93B0D2">
+      <!-- toolbar with venue name and drop down button -->
+      <v-toolbar-title class="tex" v-html="show.venue"></v-toolbar-title>
       <v-card-actions>
       <v-btn icon @click="display = !display">
+        <!-- if display variable is false, point arrow down, if the expansion drawer is displaying point arrow up -->
         <v-icon>{{ display ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
       </v-btn>
       </v-card-actions>
       
     </v-toolbar>
-    <v-slide-y-transition color="#4372AA">
-      <v-card-text v-show="display">
-        {{ dateFormat(show.date) }}
-        {{ show.details }}
+    <!-- vertical slide transition -->
+    <v-slide-y-transition>
+      <!-- display details about the show / venue, and date / time of event -->
+      <v-card-text class="tex" v-show="display">
+        <p>{{ dateFormat(show.date) }}</p>
+        <p>{{ show.details }}</p>
       </v-card-text>
     </v-slide-y-transition>
   </v-card>
@@ -28,10 +33,10 @@ export default {
     return {
       display: false,
       months: [
-        'error: ', 'Jan', 'Feb',
-        'Mar', 'Apr', 'May', 'Jun',
-        'Jul', 'Aug', 'Sep', 'Oct',
-        'Nov', 'Dec'
+        'error: ', 'January', 'February',
+        'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October',
+        'November', 'December'
       ]
     }
   },
@@ -59,5 +64,10 @@ export default {
 </script>
 
 <style>
-  
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+  .tex {
+    color: #003366;
+    font-family: 'Roboto', 'sans-serif';
+  }
 </style>

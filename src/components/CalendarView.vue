@@ -1,14 +1,20 @@
 <template>
+<!-- outer div -->
 <v-card>
+  <!-- Calendar -->
   <v-calendar>
+    <!-- inner workings, to create markers for events. -->
     <template v-slot:day="{ date }">
+      <!-- for loop over events, and begin plotting them on calendar -->
       <template v-for="event in eventsMap[date]">
+        <!-- stick a label on event dates -->
         <v-menu
           :key="event.venue"
           v-model="event.open"
           full-width
           offset-x
         >
+        <!-- activator button opens card to display relevent data -->
           <template v-slot:activator="{ on }">
             <div
               v-if="!event.time"
@@ -18,6 +24,7 @@
               v-html="event.venue"
             ></div>
           </template>
+          <!-- opens up to display more details on the event. -->
           <v-card
             color="grey lighten-4"
             min-width="350px"
@@ -27,12 +34,14 @@
               color="#4372AA"
               dark
             >
+            <!-- display the venue name + the formatted date -->
               <v-toolbar-title v-html="event.venue + ' ' + dateFormat(event.date)"> </v-toolbar-title>
             </v-toolbar>
             <v-card-title primary-title>
               <span v-html="event.details"></span>
             </v-card-title>
             <v-card-actions>
+              <!-- button to close the pop-up card -->
               <v-btn
                 flat
                 color="#687C97"
@@ -53,6 +62,7 @@ export default {
   name: 'CalendarView',
   data () {
     return {
+      // data array, to store formatted month strings
       months: [
         'error: ', 'Jan', 'Feb',
         'Mar', 'Apr', 'May', 'Jun',
